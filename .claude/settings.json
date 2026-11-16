@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash scripts/verify.sh)",
+      "Bash(node tests/core.test.js)",
+      "Bash(node tests/safety.test.js)",
+      "Bash(gradle:*)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ],
+    "deny": [
+      "Bash(git push:*)",
+      "Bash(git add -f release/*)",
+      "Bash(git add -f keystore/*)",
+      "Read(./keystore/cybnate.jks)",
+      "Read(./release/model-raw.txt)"
+    ]
+  }
+}
